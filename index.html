@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpendWise | Personal Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>SpendWise</h1>
+      <p>Smart Personal Expense & Budget Tracker</p>
+    </header>
+
+    <section class="balance-card">
+      <h2>Total Balance: <span id="balance">KES 0.00</span></h2>
+      <div class="summary">
+        <div class="income">
+          <span>Income</span>
+          <p id="total-income">+KES 0.00</p>
+        </div>
+        <div class="expense">
+          <span>Expenses</span>
+          <p id="total-expense">-KES 0.00</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h3>Add New Transaction</h3>
+      <form id="transaction-form">
+        <input type="text" id="description" placeholder="Description (e.g., Groceries, Salary)" required />
+        <input type="number" id="amount" placeholder="Amount (KES)" step="0.01" required />
+        <select id="type">
+          <option value="income">Income (+)</option>
+          <option value="expense">Expense (-)</option>
+        </select>
+        <button type="submit">Add Transaction</button>
+      </form>
+    </section>
+
+    <section class="history-section">
+      <h3>Transaction History</h3>
+      <ul id="transaction-list"></ul>
+    </section>
+
+    <footer>
+      <p>Built & Deployed by Simon Ohure | SpendWise v1.1</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
